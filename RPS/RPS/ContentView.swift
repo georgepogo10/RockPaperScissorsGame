@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  RPS
 //
-//  Created by George Pogorelov on 5/11/23.
+//  Created by George Pogorelov
 //
 
 import SwiftUI
@@ -11,10 +11,12 @@ struct ContentView: View {
     
     @State var cpuPlay = 0
     @State var playerPlay = ""
+    
     @State var cpuScore = 0
     @State var playerScore = 0
     
-    @State var rock:Int = 1;
+    //value assigned to indicate which play is being used 
+    @State var rock = 1;
     @State var paper = 2;
     @State var sis = 3;
     
@@ -27,7 +29,7 @@ struct ContentView: View {
             
             Image("background-wood-cartoon").resizable()
                 .ignoresSafeArea()
-            //Main verticle Stack
+            //Main verticle Stack with design
             VStack{
                 //displays logo
                 Image("rps")
@@ -45,7 +47,7 @@ struct ContentView: View {
                 }
                 HStack{
                     Spacer()
-                    // Text(String(cpuPlay))
+                   
                     Text(String(cpuScore))
                         .font(.title)
                         .foregroundColor(Color.white)
